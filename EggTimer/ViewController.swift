@@ -13,6 +13,9 @@ class ViewController: UIViewController {
     var timer = Timer()     // Global variable.
     var time = 0
     
+    var kiwiRun = Timer()
+  
+    
     @IBOutlet var image: UIImageView!
     
     var counter = 0
@@ -27,15 +30,12 @@ class ViewController: UIViewController {
         }
     }
     
-    @IBAction func runButton(_ sender: AnyObject) {
+ /*   @IBAction func runButton(_ sender: AnyObject) {
         
         timer = Timer.scheduledTimer(timeInterval: 0.1, target: self, selector: #selector(ViewController.animate), userInfo: nil, repeats: true)
         
-
-        
-
-        
     }
+ */
     
     @IBOutlet var timerLabel: UILabel!
     
@@ -50,6 +50,8 @@ class ViewController: UIViewController {
     @IBAction func startButton(_ sender: AnyObject) {
         
         timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(ViewController.processTimer), userInfo: nil, repeats: true)
+        
+        kiwiRun = Timer.scheduledTimer(timeInterval: 0.1, target: self, selector: #selector(ViewController.animate), userInfo: nil, repeats: true)
         
     }
     
@@ -70,14 +72,6 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-      /*  image.image = UIImage(named: "tmp-\(counter).gif")
-        counter += 1
-        
-        if counter == 12 {
-            counter = 0
-        }
-        */
         
     }
 
