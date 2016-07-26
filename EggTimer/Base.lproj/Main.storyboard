@@ -58,20 +58,12 @@
                                     <navigationItem title="Stopwatch" id="Hp6-Tc-LRl"/>
                                 </items>
                             </navigationBar>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0wq-hO-Dai">
-                                <state key="normal" title="Run"/>
-                                <connections>
-                                    <action selector="runButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="6Vy-zZ-aMK"/>
-                                </connections>
-                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.94901960780000005" green="0.79371407230000002" blue="0.047886851670000001" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstItem="0wq-hO-Dai" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="EI0-o3-DCa"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="Txm-yG-dng" secondAttribute="bottom" constant="96" id="S4T-1G-GKS"/>
                             <constraint firstItem="Txm-yG-dng" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="ULM-uY-W7f"/>
                             <constraint firstItem="g19-Vb-QPc" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="bSP-ma-YVs"/>
-                            <constraint firstItem="0wq-hO-Dai" firstAttribute="top" secondItem="g19-Vb-QPc" secondAttribute="bottom" constant="90" id="exP-R5-dnf"/>
                             <constraint firstItem="g19-Vb-QPc" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="jEa-y2-WCA"/>
                             <constraint firstItem="Txm-yG-dng" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="kVb-0E-Jty"/>
                             <constraint firstAttribute="trailing" secondItem="Txm-yG-dng" secondAttribute="trailing" id="vln-Ww-ie9"/>

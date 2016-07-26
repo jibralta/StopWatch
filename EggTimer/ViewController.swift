@@ -30,12 +30,8 @@ class ViewController: UIViewController {
         }
     }
     
- /*   @IBAction func runButton(_ sender: AnyObject) {
-        
-        timer = Timer.scheduledTimer(timeInterval: 0.1, target: self, selector: #selector(ViewController.animate), userInfo: nil, repeats: true)
-        
-    }
- */
+    var isAnimating = false
+
     
     @IBOutlet var timerLabel: UILabel!
     
@@ -51,13 +47,17 @@ class ViewController: UIViewController {
         
         timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(ViewController.processTimer), userInfo: nil, repeats: true)
         
+        
         kiwiRun = Timer.scheduledTimer(timeInterval: 0.1, target: self, selector: #selector(ViewController.animate), userInfo: nil, repeats: true)
+        
         
     }
     
     @IBAction func pauseButton(_ sender: AnyObject) {
         
         timer.invalidate()
+        
+        kiwiRun.invalidate()
         
     }
     
@@ -66,6 +66,9 @@ class ViewController: UIViewController {
         timer.invalidate()
         time = 0
         timerLabel.text = "0"
+        
+        kiwiRun.invalidate()
+        time = 0
         
     }
     
