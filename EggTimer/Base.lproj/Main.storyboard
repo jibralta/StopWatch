@@ -1,26 +1,84 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11134" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11173.2" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11106"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11143.2"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="EggTimer" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="667" height="375"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <subviews>
+                            <imageView opaque="NO" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="kiwiRun.gif" translatesAutoresizingMaskIntoConstraints="NO" id="Txm-yG-dng">
+                                <color key="backgroundColor" red="0.94901960784313721" green="0.79371407234787694" blue="0.047886851671849036" alpha="1" colorSpace="calibratedRGB"/>
+                            </imageView>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="54T-yv-r4J">
+                                <frame key="frameInset" minX="-1" height="44"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <items>
+                                    <barButtonItem title="Start" id="cO3-QM-mOz">
+                                        <connections>
+                                            <action selector="startButton:" destination="BYZ-38-t0r" id="QXm-4v-dx2"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="MCe-Gp-pEh"/>
+                                    <barButtonItem systemItem="pause" id="OvV-Ln-aMD">
+                                        <connections>
+                                            <action selector="pauseButton:" destination="BYZ-38-t0r" id="qpg-4D-dEM"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="b5r-Sg-IpA"/>
+                                    <barButtonItem title="Reset" id="lS7-Gv-IbV">
+                                        <connections>
+                                            <action selector="resetButton:" destination="BYZ-38-t0r" id="uBi-Yo-RWq"/>
+                                        </connections>
+                                    </barButtonItem>
+                                </items>
+                            </toolbar>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="g19-Vb-QPc">
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="35"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="AE7-Z8-z0K">
+                                <frame key="frameInset" minX="-1" minY="28" height="44"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <items>
+                                    <navigationItem title="Stopwatch" id="Hp6-Tc-LRl"/>
+                                </items>
+                            </navigationBar>
+                        </subviews>
+                        <color key="backgroundColor" red="0.94901960780000005" green="0.79371407230000002" blue="0.047886851670000001" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="Txm-yG-dng" secondAttribute="bottom" constant="96" id="S4T-1G-GKS"/>
+                            <constraint firstItem="Txm-yG-dng" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="ULM-uY-W7f"/>
+                            <constraint firstItem="g19-Vb-QPc" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="bSP-ma-YVs"/>
+                            <constraint firstItem="g19-Vb-QPc" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="jEa-y2-WCA"/>
+                            <constraint firstItem="Txm-yG-dng" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="kVb-0E-Jty"/>
+                            <constraint firstAttribute="trailing" secondItem="Txm-yG-dng" secondAttribute="trailing" id="vln-Ww-ie9"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="timerLabel" destination="g19-Vb-QPc" id="8cO-FQ-K5W"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="133.59999999999999" y="123.68815592203899"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="kiwiRun.gif" width="500" height="400"/>
+    </resources>
 </document>
