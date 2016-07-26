@@ -17,7 +17,7 @@ class ViewController: UIViewController {
     
     var counter = 0
     
-    @IBAction func runButton(_ sender: AnyObject) {
+    func animate() {
         
         image.image = UIImage(named: "tmp-\(counter).gif")
         counter += 1
@@ -25,6 +25,16 @@ class ViewController: UIViewController {
         if counter == 12 {
             counter = 0
         }
+    }
+    
+    @IBAction func runButton(_ sender: AnyObject) {
+        
+        timer = Timer.scheduledTimer(timeInterval: 0.1, target: self, selector: #selector(ViewController.animate), userInfo: nil, repeats: true)
+        
+
+        
+
+        
     }
     
     @IBOutlet var timerLabel: UILabel!
@@ -61,7 +71,13 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-
+      /*  image.image = UIImage(named: "tmp-\(counter).gif")
+        counter += 1
+        
+        if counter == 12 {
+            counter = 0
+        }
+        */
         
     }
 
